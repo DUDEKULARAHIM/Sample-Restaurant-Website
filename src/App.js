@@ -35,7 +35,6 @@
 
 
 
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -54,16 +53,18 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [data, setData] = useState(null);
 
-  // Use useEffect to fetch data from your backend when the component mounts
+  // Fetch data from your backend when the component mounts
   useEffect(() => {
-    // Make a request to your backend
-    axios.get('https://simple-restaurant-backend.onrender.com')
-      .then(response => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://simple-restaurant-backend.onrender.com/api/data');
         setData(response.data); // Store the fetched data in state
-      })
-      .catch(error => {
+      } catch (error) {
         console.error('Error fetching data:', error);
-      });
+      }
+    };
+    
+    fetchData();
   }, []);
 
   return (
@@ -81,7 +82,7 @@ function App() {
           element={<Login setIsAuthenticated={setIsAuthenticated} />}
         />
       </Routes>
-      {/* Display fetched data at the bottom of the app */}
+      {/* Uncomment to display fetched data */}
       {/* <div>
         <h1>Data from Backend:</h1>
         {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : <p>Loading...</p>}
@@ -91,3 +92,4 @@ function App() {
 }
 
 export default App;
+
