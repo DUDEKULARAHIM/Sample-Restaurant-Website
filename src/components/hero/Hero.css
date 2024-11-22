@@ -1,7 +1,7 @@
 
 .hero-section {
 /*     background-image: url('herobackground.webp'); */
-    background-color: "black";
+    background-color: #ccc;
     height: 60vh;
     display: flex;
     align-items: center;
