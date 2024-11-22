@@ -20,7 +20,7 @@ const Hero = () => {
     <div className="hero-section">
       <div className="hero-content">
         <h3>Welcome</h3>
-        <h3>Our Services are  to {dynamicText}</h3>
+        <h3>Our Services are ... {dynamicText}</h3>
         <p>The most delicious items are available here!</p>
       </div>
     </div>
