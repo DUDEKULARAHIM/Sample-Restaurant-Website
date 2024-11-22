@@ -57,7 +57,7 @@ function App() {
   // Use useEffect to fetch data from your backend when the component mounts
   useEffect(() => {
     // Make a request to your backend
-    axios.get('https://simple-restaurant-backend.onrender.com')
+    axios.get('https://simple-restaurant-backend.onrender.com/api/data')
       .then(response => {
         setData(response.data); // Store the fetched data in state
       })
