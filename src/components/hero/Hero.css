@@ -1,0 +1,52 @@
+
+.hero-section {
+    background-image: url('herobackground.webp');
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #ffa500;
+    text-align: left;
+    background-size: cover;   
+    background-position: center;
+    padding: 50px;
+    opacity: 0; /* Start hidden for fade-in effect */
+    transform: translateY(50px); /* Start 50px below */
+    animation: slideUp 1s ease-out forwards; /* Slide-up animation */
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  
+  .hero-section h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    color:#ffa500;
+    animation: 2s ease-in-out infinite; /* Fading effect for dynamic text */
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  @keyframes fadeIn {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  

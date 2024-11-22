@@ -1,0 +1,68 @@
+/* src/components/OtherServices.css */
+
+.services-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+    display: inline-block; /* Keeps the underline centered under the text */
+  }
+  
+  h1::after {
+    content: "";
+    display: block;
+    width: 50%; /* Adjust this width as desired */
+    height: 3px;
+    background-color: #ff5722; /* Matches the color of the icons */
+    margin: 8px auto 0; /* Center the underline */
+    border-radius: 2px; /* Rounded edges for the underline */
+  }
+  
+  .service-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .service-item {
+    width: 360px; /* Increased width for each item */
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  .service-icon {
+    font-size: 3.5rem;
+    color: #ff5722;
+    margin-bottom: 15px;
+  }
+  
+  h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .service-items {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service-item {
+      width: 100%; /* Full width on smaller screens */
+    }
+  }
+  

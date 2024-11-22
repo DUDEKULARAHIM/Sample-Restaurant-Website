@@ -1,0 +1,66 @@
+/* src/pages/Chef.css */
+
+.chef-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+  }
+  
+  .chef-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .chef-slider {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .chef-card {
+    width: 100%;
+    max-width: 250px; /* Set a max width for better control */
+    margin: 0 auto;
+    /* Other styling... */
+  }
+  
+  
+  .chef-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .chef-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .chef-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .chef-name {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .chef-experience {
+    font-size: 1em;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .chef-details {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+  

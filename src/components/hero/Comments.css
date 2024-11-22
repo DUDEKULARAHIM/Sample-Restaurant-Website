@@ -1,0 +1,64 @@
+/* src/pages/Comments.css */
+
+.comments-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 20px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .comments-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  
+  .comment-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .person-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+  }
+  
+  .person-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .person-name {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0;
+  }
+  
+  .rating {
+    display: flex;
+  }
+  
+  .comment-text {
+    font-size: 1em;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+  

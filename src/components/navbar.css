@@ -1,0 +1,135 @@
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: white;
+  color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo img {
+  width: 150px;
+  height: 80px;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 50px;
+  border: black;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, background-color 0.3s;
+  font-size: 18px;
+}
+
+/* Style for active link */
+.nav-link.active-link {
+  color: #ffa500; /* Active color, e.g., orange */
+  font-weight: bold; /* Optional: make active link bold */
+}
+
+.nav-link:hover {
+  color: #ffa500;
+}
+
+.navbar-register {
+  display: flex;
+  gap: 1rem;
+}
+
+.register-button {
+  color: #333;
+  background-color: #ffa500;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: #cc8400;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+  border:2px solid black;
+  padding:10px;
+}
+
+.hamburger .dot {
+  width: 25px;
+  height: 4px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+/* Responsive Design for Small and Medium Screens */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 1rem;
+  }
+
+  .navbar-center {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    z-index: 999;
+  }
+
+  .navbar-center.active {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;   /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding: 1rem 0;
+  }
+
+  .navbar-center.active .nav-link {
+    padding: 0.5rem 1rem; /* Add padding for a button-like feel */
+    border-radius: 5px; /* Optional: Rounded corners */
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .navbar-center.active .nav-link:hover {
+    background-color: #ffa500; /* Highlight background color */
+    color: white; /* Change text color for contrast */
+  }
+
+  .navbar-register {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-register {
+    flex-direction: row;
+  }
+}

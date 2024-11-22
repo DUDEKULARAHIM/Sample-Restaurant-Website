@@ -1,0 +1,42 @@
+.services-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .services-section h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .specialties-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .specialty-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .specialty-item :hover{
+    transform: translateY(-5px);
+    transform: scale(1.1); 
+  }
+  .specialty-image {
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+  }
+  
+  .specialty-name {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #555;
+  }
+  

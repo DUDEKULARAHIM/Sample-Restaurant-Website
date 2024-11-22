@@ -1,0 +1,77 @@
+/* General Styles for About Page */
+.about-page {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .about-page h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .about-page p {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 300px;
+    line-height: 1.6;
+    font-size: 1.1em;
+  }
+  
+  .about-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .about-button:hover {
+    background-color: #e65c00;
+  }
+  
+  /* Responsive for Medium Screens (Tablets, 768px and below) */
+  @media (max-width: 768px) {
+    .about-page {
+      display: flex;
+      flex-direction: column; /* Keep heading and button vertical */
+      align-items: center;
+      text-align: center;
+      gap: 20px; /* Add spacing between heading, text, and button */
+    }
+  
+    .about-page p {
+      display: flex;
+      flex-direction: row; /* Make the text horizontal */
+      justify-content: center; /* Center text content */
+      align-items: center; /* Align text vertically */
+      max-width: none; /* Allow horizontal layout to fit properly */
+      padding: 0; /* Remove excessive padding */
+      font-size: 1em; /* Reduce font size slightly */
+      line-height: 1.5;
+    }
+  }
+  
+  /* Responsive for Small Screens (Mobile Phones, 480px and below) */
+  @media (max-width: 480px) {
+    .about-page p {
+      display: flex;
+      flex-direction: row; /* Maintain horizontal text layout */
+      justify-content: center;
+      align-items: center;
+      gap: 10px; /* Add small spacing between text items */
+      font-size: 0.9em; /* Reduce font size further */
+      line-height: 1.4; /* Compact line spacing */
+    }
+  
+    .about-page h1 {
+      font-size: 1.8em; /* Slightly smaller heading for mobile */
+    }
+  
+    .about-button {
+      padding: 8px 16px; /* Adjust button size for mobile */
+      font-size: 0.9em; /* Adjust button font size */
+    }
+  }
+  

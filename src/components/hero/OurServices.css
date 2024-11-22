@@ -1,0 +1,57 @@
+/* src/pages/OurServices.css */
+
+.our-services {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .our-services h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+  
+  .recipe-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .recipe-card {
+    background-color: #f8f8f8;
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .recipe-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  
+  .recipe-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
+  }
+  
+  .recipe-card:hover .recipe-image {
+    transform: scale(1.1); /* Zoom in by 10% on hover */
+  }
+  
+  .recipe-name {
+    font-size: 1.2em;
+    margin: 15px 0 5px;
+    color: #333;
+  }
+  
+  .recipe-note {
+    font-size: 0.9em;
+    padding: 0 10px 15px;
+    color: #777;
+  }
+  
