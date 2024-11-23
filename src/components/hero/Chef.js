@@ -1,6 +1,4 @@
-// src/pages/Chef.js
 import React from "react";
-import Slider from "react-slick"; // Importing the Slider
 import "./Chef.css"; // Importing styles
 
 function Chef() {
@@ -10,7 +8,7 @@ function Chef() {
       image: "/images/chef1.jpg",
       name: "Chef John Doe",
       experience: "15 years",
-      details: "Specializes in Italian$Mediterranean cuisine for fusion dishes.",
+      details: "Specializes in Italian & Mediterranean cuisine for fusion dishes.",
     },
     {
       image: "/images/chef3.webp",
@@ -33,33 +31,10 @@ function Chef() {
     // Add more chef objects as needed
   ];
 
-  // Slider settings
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 3, // Show 3 cards at once
-    slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <div className="chef-section">
       <h1>Meet Our Chefs</h1>
-      <Slider {...settings} className="chef-slider">
+      <div className="chef-scroll-container">
         {chefs.map((chef, index) => (
           <div key={index} className="chef-card">
             <img src={chef.image} alt={chef.name} className="chef-image" />
@@ -68,7 +43,7 @@ function Chef() {
             <p className="chef-details">{chef.details}</p>
           </div>
         ))}
-      </Slider>
+      </div>
     </div>
   );
 }
