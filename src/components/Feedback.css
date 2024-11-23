@@ -1,0 +1,164 @@
+/* Default Styles (for larger screens) */
+/* body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+  } */
+  
+  .feedback-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .container {
+    width: 70%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* White background for form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .label {
+    font-size: 20px;
+  }
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputField {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 38px;
+    font-size: 17px;
+    width: 100%;
+  }
+  
+  .textareaField {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 100px;
+    width: 100%;
+  }
+  
+  .submitButton {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .googleMap {
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px; /* Max width for large screens */
+  }
+  
+  .locheading {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 35px;
+  }
+  
+  /* Responsive Map */
+  .googleMap iframe {
+    width: 100%;
+    height: 400px; /* Default height for large screens */
+    border: 0;
+  }
+  
+  /* Media Queries */
+  
+  /* Medium Screens (Tablet) */
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+    }
+  
+    .label {
+      font-size: 18px;
+    }
+  
+    .inputField {
+      font-size: 16px;
+    }
+  
+    .textareaField {
+      height: 120px;
+    }
+  
+    .submitButton {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .googleMap iframe {
+      height: 300px; /* Reduced height for tablet screens */
+    }
+  
+    .locheading {
+      font-size: 30px;
+    }
+  }
+  
+  /* Small Screens (Mobile) */
+  @media (max-width: 380px) {
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .label {
+      font-size: 16px;
+    }
+  
+    .inputField {
+      font-size: 14px;
+    }
+  
+    .textareaField {
+      height: 120px;
+    }
+  
+    .submitButton {
+      padding: 8px;
+      font-size: 12px;
+    }
+  
+    .googleMap iframe {
+      height: 250px; /* Further reduced height for mobile screens */
+    }
+  
+    .locheading {
+      font-size: 25px;
+    }
+  }
+  
