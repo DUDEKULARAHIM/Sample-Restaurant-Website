@@ -1,0 +1,120 @@
+/* Login Container */
+.login-container {
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+  }
+  
+  /* Left Section (Image) */
+  .login-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .login-left img {
+    max-width: 100%;
+    height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Right Section (Form) */
+  .login-right {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .form {
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid black;
+    padding: 60px;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  
+  .input-container .icon {
+    color: #888;
+    margin-right: 10px;
+    font-size: 22px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .login-left {
+      flex-basis: 100%;
+      order: 2; /* Show image below the form */
+    }
+  
+    .login-right {
+      flex-basis: 100%;
+      padding: 20px;
+      order: 1; /* Show form above the image */
+    }
+  
+    .form {
+      padding: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .form {
+      padding: 20px;
+    }
+  
+    .input-container .icon {
+      font-size: 18px;
+    }
+  
+    .input-field {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .login-button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  
