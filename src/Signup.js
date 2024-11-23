@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { FaUser, FaPhoneAlt, FaEnvelope, FaLock } from "react-icons/fa"; // FontAwesome icons
-
+import { useNavigate , Link } from "react-router-dom"; // For navigation
+import "./Signup.css";
 const Signup = () => {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -26,102 +27,113 @@ const Signup = () => {
       });
 
       alert(response.data.message);
+       navigate("/login");
     } catch (error) {
       alert(error.response.data.message);
     }
   };
 
   return (
-    <div style={styles.signupContainer}>
-      <div style={styles.signupLeft}>
+   <div className="signup-container">
+      <div className="signup-left">
         <img
-          src="images/feedback.jpg" // Replace with your actual image URL
+          src="images/login.webp" // Replace with your actual image URL
           alt="Signup"
-          style={styles.signupImage}
         />
       </div>
-      <div style={styles.signupRight}>
-        <form onSubmit={handleSubmit} style={styles.form}>
-          <h2><center>Create Account</center></h2>
+      <div className="signup-right">
+        <form onSubmit={handleSubmit} className="form">
+          <h2>
+            <center>Create Account</center>
+          </h2>
 
-          <div style={styles.inputGroup}>
+          <div className="input-group">
             <label>Name</label>
-            <div style={styles.inputContainer}>
-              <FaUser style={styles.icon} />
+            <div className="input-container">
+              <FaUser className="icon" />
               <input
                 type="text"
                 placeholder="Enter your name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
-                style={styles.inputField}
+                className="input-field"
               />
             </div>
           </div>
 
-          <div style={styles.inputGroup}>
+          <div className="input-group">
             <label>Phone Number</label>
-            <div style={styles.inputContainer}>
-              <FaPhoneAlt style={styles.icon} />
+            <div className="input-container">
+              <FaPhoneAlt className="icon" />
               <input
                 type="text"
                 placeholder="Enter your phone number"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 required
-                style={styles.inputField}
+                className="input-field"
               />
             </div>
           </div>
 
-          <div style={styles.inputGroup}>
+          <div className="input-group">
             <label>Email</label>
-            <div style={styles.inputContainer}>
-              <FaEnvelope style={styles.icon} />
+            <div className="input-container">
+              <FaEnvelope className="icon" />
               <input
                 type="email"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                style={styles.inputField}
+                className="input-field"
               />
             </div>
           </div>
 
-          <div style={styles.inputGroup}>
+          <div className="input-group">
             <label>Password</label>
-            <div style={styles.inputContainer}>
-              <FaLock style={styles.icon} />
+            <div className="input-container">
+              <FaLock className="icon" />
               <input
                 type="password"
                 placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                style={styles.inputField}
+                className="input-field"
               />
             </div>
           </div>
 
-          <div style={styles.inputGroup}>
+          <div className="input-group">
             <label>Confirm Password</label>
-            <div style={styles.inputContainer}>
-              <FaLock style={styles.icon} />
+            <div className="input-container">
+              <FaLock className="icon" />
               <input
                 type="password"
                 placeholder="Confirm your password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
-                style={styles.inputField}
+                className="input-field"
               />
             </div>
           </div>
 
-          <button type="submit" style={styles.signupButton}>
-            Sign Up
+          <button type="submit" className="signup-button" disabled={loading}>
+            {loading ? "Signing Up..." : "Sign Up"}
           </button>
+
+            {/* Login Up Link */}
+            <div style={{ marginTop: "20px", textAlign: "center" }}>
+            <span>You have an account? </span>
+            <Link to="/login" style={{ color: "#4CAF50" }}>
+              Login Up
+            </Link>
+          </div>
+
         </form>
       </div>
     </div>
