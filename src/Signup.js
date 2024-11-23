@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { FaUser, FaPhoneAlt, FaEnvelope, FaLock } from "react-icons/fa"; // FontAwesome icons
 import { useNavigate , Link } from "react-router-dom"; // For navigation
-// import "./Signup.css";
+import "./Signup.css";
 const Signup = () => {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -131,71 +131,71 @@ const Signup = () => {
   );
 };
 
-const styles = {
-  signupContainer: {
-    display: "flex",
-    height: "100vh",
-    flexWrap: "wrap",
-  },
-  signupLeft: {
-    flex: 1,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  signupImage: {
-    maxWidth: "100%",
-    height: "90%",
-    borderRadius: "8px",
-    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-  },
-  signupRight: {
-    flex: 1,
-    padding: "40px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "white",
-  },
-  form: {
-    width: "100%",
-    maxWidth: "400px",
-    padding: "30px 70px",
-    border: "2px solid black",
-  },
-  inputGroup: {
-    marginBottom: "20px",
-  },
-  inputContainer: {
-    display: "flex",
-    alignItems: "center",
-    border: "1px solid #ddd",
-    borderRadius: "5px",
-    padding: "10px",
-    marginTop: "5px",
-  },
-  icon: {
-    color: "#888",
-    marginRight: "10px",
-    fontSize: "18px",
-  },
-  inputField: {
-    width: "100%",
-    padding: "12px",
-    fontSize: "16px",
-    border: "none",
-    outline: "none",
-  },
-  signupButton: {
-    width: "100%",
-    padding: "14px",
-    backgroundColor: "#4CAF50",
-    color: "white",
-    border: "none",
-    borderRadius: "5px",
-    fontSize: "16px",
-    cursor: "pointer",
-  },
-};
+// const styles = {
+//   signupContainer: {
+//     display: "flex",
+//     height: "100vh",
+//     flexWrap: "wrap",
+//   },
+//   signupLeft: {
+//     flex: 1,
+//     display: "flex",
+//     justifyContent: "center",
+//     alignItems: "center",
+//   },
+//   signupImage: {
+//     maxWidth: "100%",
+//     height: "90%",
+//     borderRadius: "8px",
+//     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+//   },
+//   signupRight: {
+//     flex: 1,
+//     padding: "40px",
+//     display: "flex",
+//     justifyContent: "center",
+//     alignItems: "center",
+//     backgroundColor: "white",
+//   },
+//   form: {
+//     width: "100%",
+//     maxWidth: "400px",
+//     padding: "30px 70px",
+//     border: "2px solid black",
+//   },
+//   inputGroup: {
+//     marginBottom: "20px",
+//   },
+//   inputContainer: {
+//     display: "flex",
+//     alignItems: "center",
+//     border: "1px solid #ddd",
+//     borderRadius: "5px",
+//     padding: "10px",
+//     marginTop: "5px",
+//   },
+//   icon: {
+//     color: "#888",
+//     marginRight: "10px",
+//     fontSize: "18px",
+//   },
+//   inputField: {
+//     width: "100%",
+//     padding: "12px",
+//     fontSize: "16px",
+//     border: "none",
+//     outline: "none",
+//   },
+//   signupButton: {
+//     width: "100%",
+//     padding: "14px",
+//     backgroundColor: "#4CAF50",
+//     color: "white",
+//     border: "none",
+//     borderRadius: "5px",
+//     fontSize: "16px",
+//     cursor: "pointer",
+//   },
+// };
 
 export default Signup;
