@@ -27,7 +27,7 @@ const Registration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/registration", formData);
+      const response = await axios.post("https://simple-restaurant-backend.onrender.com/api/registration", formData);
       alert("Registration successful!");
     } catch (error) {
       console.error("Error registering:", error);
