@@ -78,9 +78,9 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
           </button>
         ) : (
           <>
-            <NavLink to="/signup" className="register-button" onClick={handleNavLinkClick}>
-              Signup
-            </NavLink>
+            // <NavLink to="/signup" className="register-button" onClick={handleNavLinkClick}>
+            //   Signup
+            // </NavLink>
             <NavLink to="/login" className="register-button" onClick={handleNavLinkClick}>
               Login
             </NavLink>
