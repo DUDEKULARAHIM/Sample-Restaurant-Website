@@ -3,9 +3,10 @@ import axios from "axios";
 import { FaEnvelope, FaLock } from "react-icons/fa"; // FontAwesome icons for email and password
 import { useNavigate , Link } from "react-router-dom";
 import "./Login.css";
-const Login = () => {
+const Login = ({ setIsAuthenticated }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
