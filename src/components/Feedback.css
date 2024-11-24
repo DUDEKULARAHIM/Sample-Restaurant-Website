@@ -15,7 +15,7 @@
     width: 100%;
   }
   
-  .container {
+  .feedback-container {
     width: 70%;
     margin: auto;
     padding-top: 20px;
@@ -99,7 +99,7 @@
   
   /* Medium Screens (Tablet) */
   @media (max-width: 768px) {
-    .container {
+    .feedback-container {
       width: 80%;
     }
   
@@ -131,7 +131,7 @@
   
   /* Small Screens (Mobile) */
   @media (max-width: 380px) {
-    .container {
+    .feedback-container {
       width: 100%;
       padding: 10px;
     }
