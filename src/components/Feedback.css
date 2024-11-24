@@ -1,214 +1,140 @@
-/* General Reset */
-body, html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
-
-/* General Styles */
-.feedback-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 20px 0;
-}
-
-/* Default Container Styles (for larger screens) */
+/* General container styling */
 .container {
-  width: 60%;
-  max-width: 1000px;
-  margin: 20px 80px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Form Styles */
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 100%;
+/* Form heading */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
 }
 
-.label {
-  font-size: 20px;
-}
-
+/* Input group styling */
 .inputGroup {
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
 }
 
-.inputField, .textareaField {
-  padding: 12px;
+/* Labels */
+.label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Input fields and textarea */
+.inputField,
+.textareaField {
+  padding: 10px;
+  font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 17px;
-  width: 100%;
+  outline: none;
 }
 
-.textareaField {
-  height: 120px;
-}
-
+/* Button */
 .submitButton {
-  padding: 15px;
-  background-color: #4CAF50;
+  background-color: #007bff;
   color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  width: 100%;
-  margin-top: 15px;
   transition: background-color 0.3s ease;
 }
 
 .submitButton:hover {
-  background-color: #45a049;
+  background-color: #0056b3;
 }
 
-/* Google Maps Section */
+/* Google Map section */
 .googleMap {
-  margin-top: 40px;
-  width: 100%;
+  margin-top: 30px;
   text-align: center;
 }
 
 .locheading {
-  font-size: 35px;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-.googleMap iframe {
-  width: 100%;
-  height: 400px;
-  border: 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Media Queries */
-
-/* Large Tablets and Medium Screens */
-@media (max-width: 992px) {
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
   .container {
-    width: 80%;
+    padding: 15px;
   }
 
-  .label {
-    font-size: 18px;
-  }
-
-  .inputField, .textareaField {
-    font-size: 16px;
+  .inputField,
+  .textareaField {
+    font-size: 0.95rem;
   }
 
   .submitButton {
-    padding: 12px;
-    font-size: 14px;
+    font-size: 0.95rem;
+    padding: 8px 12px;
   }
 
-  .locheading {
-    font-size: 30px;
-  }
-
-  .googleMap iframe {
+  iframe {
+    width: 100%;
     height: 350px;
   }
 }
 
-/* Small Tablets and Large Mobile Screens */
-@media (max-width: 768px) {
-  .container {
-    width: 90%;
-  }
-
-  .label {
-    font-size: 18px;
-  }
-
-  .inputField, .textareaField {
-    font-size: 15px;
-  }
-
-  .submitButton {
-    padding: 10px;
-    font-size: 14px;
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.75rem;
   }
 
   .locheading {
-    font-size: 28px;
+    font-size: 1.4rem;
   }
 
-  .googleMap iframe {
+  .inputField,
+  .textareaField {
+    font-size: 0.9rem;
+  }
+
+  .submitButton {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  iframe {
     height: 300px;
   }
 }
 
-/* Small Mobile Screens */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .container {
-    width: 95%;
-    padding: 20px;
-  }
-
-  .label {
-    font-size: 16px;
-  }
-
-  .inputField, .textareaField {
-    font-size: 14px;
-  }
-
-  .submitButton {
     padding: 10px;
-    font-size: 13px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
   }
 
   .locheading {
-    font-size: 24px;
+    font-size: 1.3rem;
   }
 
-  .googleMap iframe {
-    height: 250px;
-  }
-}
-
-/* Extra Small Mobile Screens */
-@media (max-width: 380px) {
-  .container {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .label {
-    font-size: 15px;
-  }
-
-  .inputField, .textareaField {
-    font-size: 13px;
+  .inputField,
+  .textareaField {
+    font-size: 0.85rem;
+    padding: 8px;
   }
 
   .submitButton {
-    padding: 8px;
-    font-size: 12px;
+    font-size: 0.85rem;
+    padding: 7px 10px;
   }
 
-  .locheading {
-    font-size: 22px;
-  }
-
-  .googleMap iframe {
-    height: 220px;
+  iframe {
+    height: 250px;
   }
 }
