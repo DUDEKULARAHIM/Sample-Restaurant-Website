@@ -1,6 +1,6 @@
 /* General Reset */
 body, html {
-  margin: 0;
+  margin-top: 80px;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
