@@ -1,0 +1,41 @@
+
+/* Animation to make the button move up and down */
+@keyframes move-up-down {
+  0% {
+    bottom: 20px;  /* Starting position */
+  }
+  100% {
+    bottom: 30px;  /* Move it slightly up */
+  }
+}
+
+/* AOS (Animate on Scroll) settings for large screens */
+[data-aos] {
+  opacity: 0;
+  transform: translateY(50px);  /* Start from below */
+  transition-property: opacity, transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);  /* Element moves to its original position */
+}
+
+/* Disable AOS animations on medium and small screens */
+@media (max-width: 1024px) {
+  [data-aos] {
+    opacity: 1 !important; /* Ensure it's always visible */
+    transform: none !important; /* Ensure no transformations */
+    transition: none !important; /* Disable transitions */
+  }
+}
+
+@media (max-width: 768px) {
+  [data-aos] {
+    opacity: 1 !important; /* Ensure it's always visible */
+    transform: none !important; /* Ensure no transformations */
+    transition: none !important; /* Disable transitions */
+  }
+}
