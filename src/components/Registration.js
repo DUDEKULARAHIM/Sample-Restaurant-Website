@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Registration.css";
+import Footer from './hero/Footer';
 
 const Registration = () => {
   const [formData, setFormData] = useState({
@@ -116,6 +117,9 @@ const Registration = () => {
           <button type="submit" className="submit-btn">Register</button>
         </form>
       </div>
+                <div>
+                <Footer />
+                </div>
     </div>
   );
 };
