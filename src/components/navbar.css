@@ -3,25 +3,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 10px;
   background-color: white;
   color: black;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-sizing: border-box;
 }
 
 .navbar-logo img {
-  width: 120px;
+  width: 120px; /* Reduced for better scaling on smaller screens */
   height: auto;
 }
 
-/* Center: Navigation Links */
 .navbar-center {
   display: flex;
-  gap: 30px;
-  border: none;
+  gap: 20px; /* Reduced gap for better spacing */
+  border: black;
 }
 
 .nav-link {
@@ -29,8 +27,7 @@
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s, background-color 0.3s;
-  font-size: 16px;
-  padding: 0.5rem;
+  font-size: 16px; /* Reduced font size for better scaling */
 }
 
 /* Style for active link */
@@ -45,57 +42,50 @@
 
 .navbar-register {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.8rem; /* Slightly reduced gap */
 }
 
 .register-button {
   color: #333;
   background-color: #ffa500;
   border: none;
-  padding: 0.4rem 0.8rem;
+  padding: 0.5rem 0.8rem; /* Adjusted padding */
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s;
-  font-size: 14px;
 }
 
 .register-button:hover {
   background-color: #cc8400;
 }
 
-/* Hamburger Menu */
 .hamburger {
   display: none;
   cursor: pointer;
   flex-direction: column;
-  gap: 5px;
-  padding: 8px;
+  gap: 4px;
+  padding: 8px; /* Adjusted padding */
   border: 2px solid black;
 }
 
 .hamburger .dot {
   width: 25px;
-  height: 3px;
+  height: 3px; /* Slightly thinner for aesthetics */
   background-color: black;
   border-radius: 5px;
 }
 
-/* Responsive Design for Medium and Small Screens */
+/* Responsive Design for Medium Screens (Tablets and Smaller Desktops) */
 @media (max-width: 1024px) {
   .navbar {
-    padding: 10px 15px;
+    padding: 10px 1rem;
   }
 
-  .navbar-logo img {
-    width: 100px;
-  }
-
-  /* Hide the navbar-center initially for medium screens */
   .navbar-center {
     display: none;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     width: 100%;
     position: absolute;
     top: 100%;
@@ -103,11 +93,8 @@
     background-color: white;
     border-top: 1px solid #ddd;
     z-index: 999;
-    padding-top: 10px;
-    box-sizing: border-box;
   }
 
-  /* When active, display the menu */
   .navbar-center.active {
     display: flex;
     flex-direction: column;
@@ -117,12 +104,9 @@
   }
 
   .navbar-center.active .nav-link {
-    width: 100%;
-    text-align: center;
-    padding: 0.8rem 0;
+    padding: 0.8rem 1rem;
     font-size: 16px;
-    border-bottom: 1px solid #ddd;
-    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
   }
 
   .navbar-center.active .nav-link:hover {
@@ -130,12 +114,10 @@
     color: white;
   }
 
-  /* Hide register buttons outside the hamburger menu */
   .navbar-register {
-    display: none;
+    display: none; /* Hide the register section for medium screens */
   }
 
-  /* Display hamburger menu */
   .hamburger {
     display: flex;
   }
@@ -144,37 +126,45 @@
 /* Responsive Design for Small Screens (Mobile) */
 @media (max-width: 768px) {
   .navbar {
-    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem; /* Adjusted padding for mobile */
   }
 
   .navbar-logo img {
-    width: 80px;
+    width: 100px; /* Smaller logo for mobile */
+    height: auto;
   }
 
-  /* Show register buttons inside the navbar-center on small screens */
-  .navbar-center.active .navbar-register {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 0;
+  .navbar-center {
+    display: none;
     width: 100%;
+  }
+
+  .navbar-center.active {
+    display: flex;
+  }
+
+  .navbar-center.active .nav-link {
+    width: 100%; /* Make the links take full width */
     text-align: center;
+    font-size: 14px; /* Smaller font size for better fit */
   }
 
-  .navbar-center.active .register-button {
-    font-size: 14px;
-    width: 80%;
-    margin: 0 auto;
-    padding: 0.6rem 0;
+  .hamburger {
+    display: flex;
+    margin-bottom: 10px; /* Add space below the hamburger */
   }
 
-  /* Adjust font-size for smaller screens */
-  .nav-link {
-    font-size: 15px;
+  .navbar-register {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
   }
 
   .register-button {
-    font-size: 14px;
-    padding: 0.5rem;
+    width: 80%; /* Full-width button for mobile */
+    text-align: center;
+    margin-bottom: 10px; /* Space below the button */
   }
 }
