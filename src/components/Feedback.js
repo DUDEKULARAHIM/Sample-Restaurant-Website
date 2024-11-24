@@ -38,7 +38,7 @@ const Feedback = () => {
   };
 
   return (
-    <div className="container">
+    <div className="feedback-container">
       <h2>Submit Feedback</h2>
       <form onSubmit={handleSubmit} className="form">
         <div className="inputGroup">
