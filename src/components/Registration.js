@@ -37,6 +37,7 @@ const Registration = () => {
   };
 
   return (
+    <div>
     <div className="registration-container">
       <div className="registration-image">
         <img src="images/feedback.jpg" alt="restaurant" />
@@ -117,9 +118,10 @@ const Registration = () => {
           <button type="submit" className="submit-btn">Register</button>
         </form>
       </div>
-                <div>
+    </div>
+            <div>
                 <Footer />
-                </div>
+              </div>
     </div>
   );
 };
