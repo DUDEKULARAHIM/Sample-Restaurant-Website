@@ -132,4 +132,10 @@
   .navbar-register {
     flex-direction: row;
   }
+
+  navbar-logo img{
+    width:120px;
+    height:80px;
+  }
 }
+
