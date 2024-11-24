@@ -12,7 +12,7 @@ const Feedback = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(""https://simple-restaurant-backend.onrender.com/api/feedback", {
+      const response = await axios.post("https://simple-restaurant-backend.onrender.com/api/feedback", {
         username,
         phone,
         comments,
